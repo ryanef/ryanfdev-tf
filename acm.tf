@@ -40,7 +40,7 @@ resource "aws_route53_record" "validation" {
 
 resource "aws_route53_record" "apex" {
   zone_id = data.aws_route53_zone.selected.id
-  name    = "ralli.media"
+  name    = var.your_domain
   type    = "A"
 
   alias {
